@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Welcome to the <i>Schmega Schman</i> Universe!</h1>
+
+<p>A comprehensive guide on anything and everything <i>Schmega Schman</i>.</p>
+
+<h1>Games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Console</th>
+      <th>Release Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><i><%= game.name %></i></td>
+        <td><%= game.console %></td>
+        <td><%= game.release_date %></td>
+        <td><%= link_to 'Show', game %></td>
+        <td><%= link_to 'Edit', edit_game_path(game) %></td>
+        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game', new_game_path %> | <%= link_to 'See All Robot Schmasters', robot_schmasters_path %>

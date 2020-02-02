@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  serial_number: MyString
+  weapon: MyString
+  weakness: MyString
+  game_id: MyString
+
+two:
+  name: MyString
+  serial_number: MyString
+  weapon: MyString
+  weakness: MyString
+  game_id: MyString

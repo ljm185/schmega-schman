@@ -1,0 +1,2 @@
+module RobotSchmastersHelper
+end

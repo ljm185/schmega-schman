@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @robot_schmaster.name %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @robot_schmaster.serial_number %>
+</p>
+
+<p>
+  <strong>Weapon:</strong>
+  <%= @robot_schmaster.weapon %>
+</p>
+
+<p>
+  <strong>Weakness:</strong>
+  <%= @robot_schmaster.weakness %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <i><%= @robot_schmaster.name_of_home_game %></i>
+</p>
+
+<%= link_to 'Edit', edit_robot_schmaster_path(@robot_schmaster) %> |
+<%= link_to 'Back', robot_schmasters_path %>

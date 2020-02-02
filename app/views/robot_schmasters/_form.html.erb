@@ -1,0 +1,42 @@
+<%= form_with(model: robot_schmaster, local: true) do |form| %>
+  <% if robot_schmaster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(robot_schmaster.errors.count, "error") %> prohibited this robot_schmaster from being saved:</h2>
+
+      <ul>
+      <% robot_schmaster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serial_number %>
+    <%= form.text_field :serial_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weapon %>
+    <%= form.text_field :weapon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weakness %>
+    <%= form.text_field :weakness %>
+  </div>
+
+  <div class="field">
+    <%= form.label :game_id %>
+    <%= form.text_field :game_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

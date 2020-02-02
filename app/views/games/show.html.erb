@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <i><%= @game.name %></i>
+</p>
+
+<p>
+  <strong>Console:</strong>
+  <%= @game.console %>
+</p>
+
+<p>
+  <strong>Release Date:</strong>
+  <%= @game.release_date %>
+</p>
+
+<p>
+  <strong>The Robot Schmasters of <i><%= @game.name %></i> are:</strong>
+</p>
+
+<% rs_list = RobotSchmaster.all.select do |robot_schmaster| %>
+  <% robot_schmaster.game_id == @game.id %>
+<% end %>
+
+<table>
+  <tbody>
+    <% rs_list.each do |robot_schmaster| %>
+      <tr>
+        <td>•</td>
+        <td><%= "#{robot_schmaster.serial_number} #{robot_schmaster.name}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

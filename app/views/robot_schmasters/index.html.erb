@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Robot Schmasters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Serial number</th>
+      <th>Weapon</th>
+      <th>Weakness</th>
+      <th>Game</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @robot_schmasters.each do |robot_schmaster| %>
+      <tr>
+        <td><%= robot_schmaster.name %></td>
+        <td><%= robot_schmaster.serial_number %></td>
+        <td><%= robot_schmaster.weapon %></td>
+        <td><%= robot_schmaster.weakness %></td>
+        <td><i><%= robot_schmaster.name_of_home_game %></i></td>
+        <td><%= link_to 'Show', robot_schmaster %></td>
+        <td><%= link_to 'Edit', edit_robot_schmaster_path(robot_schmaster) %></td>
+        <td><%= link_to 'Destroy', robot_schmaster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Robot Schmaster', new_robot_schmaster_path %> | <%= link_to 'Go Back to Games', games_path %>
