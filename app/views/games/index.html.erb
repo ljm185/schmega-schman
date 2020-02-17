@@ -19,12 +19,12 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><i><%= game.name %></i></td>
+        <td><i><%= link_to game.name, game %></i></td>
         <td><%= game.console %></td>
         <td><%= game.release_date %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        # <td><%= link_to 'Show', game %></td>
+        <td><%= link_to 'Edit Game', edit_game_path(game) %></td>
+        <td><%= link_to 'Delete Game', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
