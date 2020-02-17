@@ -23,7 +23,7 @@
         <td><%= game.console %></td>
         <td><%= game.release_date %></td>
         <td><%= link_to 'Edit Game', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy Game', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy Game', game, method: :delete, data: { confirm: 'Destroy game?' } %></td>
       </tr>
     <% end %>
   </tbody>
